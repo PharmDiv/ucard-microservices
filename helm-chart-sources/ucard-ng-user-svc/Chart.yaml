@@ -1,5 +1,5 @@
 apiVersion: v2
-name: ucard_ng_user_svc
+name: ucard-ng-user-svc
 description: A Helm chart for U-Card User Service
 
 # A chart can be either an 'application' or a 'library' chart.
