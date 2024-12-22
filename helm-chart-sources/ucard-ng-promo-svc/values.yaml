@@ -1,0 +1,30 @@
+app:
+  name: ucard-ng-promo-svc
+  port: 5005
+  image:
+    repository: docker.io/darksueii/ucard-ng-promo-svc
+    tag: latest
+    pullPolicy: Always
+  replicas: 1
+  namespace: ucard-ng-dev
+
+configmap:
+  name: ucard-ng-promo-svc-config
+  data:
+    APP_PORT: null
+    DB_PORT: null
+
+secret:
+  name: ucard-ng-promo-svc-secret
+  data:
+    NODE_ENV: null
+    APP_HOST: null
+    DB_HOST: null
+    DB_USERNAME: null
+    DB_PASSWORD: null
+    DB_DATABASE: null
+    DB_DATABASE_TYPE: null
+
+service:
+  type: ClusterIP
+  protocol: TCP

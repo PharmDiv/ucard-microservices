@@ -1,0 +1,46 @@
+app:
+  name: ucard-ng-token-svc
+  port: 5002
+  image:
+    repository: docker.io/darksueii/ucard_ng_token_svc
+    tag: latest
+    pullPolicy: Always
+  replicas: 1
+  namespace: ucard-ng-dev
+
+dapr:
+  appId: ucard-ng-token-svc
+  appPort: 5002
+  enableMetrics: true
+  enabled: true
+  metricsPort: 9099
+  sidecarListenAddresses: 0.0.0.0
+
+secret:
+  name: ucard-ng-token-svc-secret
+  data:
+    NODE_ENV: null
+    APP_HOST: null
+    DAPR_PUBSUB_NAME: null
+    KEYCLOAK_REALM: null
+    KEYCLOAK_ADMIN_USERNAME: null
+    KEYCLOAK_ADMIN_PASSWORD: null
+    KEYCLOAK_CLIENT_ID: null
+    KEYCLOAK_PUB_KEY: null
+    PERMIFY_ENTITY_ID: null
+    PERMIFY_TENANT_ID: null
+    DAPR_HOST: null
+
+configmap:
+  name: ucard-ng-token-svc-configmap
+  data:
+    APP_PORT: null
+    DAPR_HTTP_PORT: null
+    BASE_URL: null
+    KEYCLOAK_BASE_URL: null
+    PERMIFY_HTTP_URL: null
+    PERMIFY_GRPC_URL: null
+
+service:
+  type: ClusterIP
+  protocol: TCP
