@@ -8,7 +8,7 @@ app:
   migrations:
     image: docker.io/crazydev0/ucard_ng_auth_migration:latest
   replicas: 1
-  namespace: ucard-ng-dev
+  # namespace: ucard-ng-dev
 
 dapr:
   appId: id-auth-svc

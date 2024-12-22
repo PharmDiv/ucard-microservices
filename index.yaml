@@ -3,9 +3,9 @@ entries:
   ucard-ng-notification-svc:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-12-22T18:09:17.540340855+01:00"
+    created: "2024-12-22T18:31:08.29445679+01:00"
     description: A Helm chart for Kubernetes
-    digest: 0548b2b028673a8a7c356677556e8f9bcbbade75e7fce8ebf65b9470b9881baa
+    digest: 24c061d260898f522b0cff96af779f4132477a18953731cca6c5328856829f89
     name: ucard-ng-notification-svc
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   ucard-ng-token-svc:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-12-22T18:09:17.54068545+01:00"
+    created: "2024-12-22T18:31:08.294766952+01:00"
     description: A Helm chart for Kubernetes
-    digest: 7f072f0a1b966793c216d7ac29b93239ced60180d255822f3ce3f332c8156bcf
+    digest: 2a30374fe241083d8848bf9ce1f5a1a38586dc3e3198cf35aa999b0932ed9bdb
     name: ucard-ng-token-svc
     type: application
     urls:
@@ -25,9 +25,9 @@ entries:
   ucard_ng_audit_svc:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-12-22T18:09:17.540993037+01:00"
+    created: "2024-12-22T18:31:08.295044286+01:00"
     description: A Helm chart for Kubernetes
-    digest: 03129cd66a1b8f3af1af4d2ba4c998071c5a5fb729dff17f5971bcf86cc8f8d9
+    digest: e5fb477031dcb940e14efe737bfb7e61774ebe5998a3c6b019ad1df3571326e3
     name: ucard_ng_audit_svc
     type: application
     urls:
@@ -36,9 +36,9 @@ entries:
   ucard_ng_auth_svc:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-12-22T18:09:17.541522478+01:00"
+    created: "2024-12-22T18:31:08.295378913+01:00"
     description: A Helm chart for Kubernetes
-    digest: 228a9bd3d3cad37507cabcc11a61bdc71799c8cd6d7b23fccbd0deeb6d9b0350
+    digest: 02dd407354c3f4d9a515817959a92827ad4ebacc801652bf4ee5ae4375791332
     name: ucard_ng_auth_svc
     type: application
     urls:
@@ -47,9 +47,9 @@ entries:
   ucard_ng_promo_svc:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-12-22T18:09:17.541829878+01:00"
+    created: "2024-12-22T18:31:08.295625416+01:00"
     description: A Helm chart for Kubernetes
-    digest: cb6dc64f39808ea82eafa00f9e4381a8d0439e688afaf2db17165370ae716f61
+    digest: 726ef3e88d843969bcaf5f8c23bbde7a769870c874ab325c771e911e81db0bd6
     name: ucard_ng_promo_svc
     type: application
     urls:
@@ -58,12 +58,12 @@ entries:
   ucard_ng_user_svc:
   - apiVersion: v2
     appVersion: 3.0.10
-    created: "2024-12-22T18:09:17.542146559+01:00"
+    created: "2024-12-22T18:31:08.295907355+01:00"
     description: A Helm chart for U-Card User Service
-    digest: ca8f4d2cfa8e77bbee655f2f886eb5fc181a30febe6a09f11288d6c4bb4804d1
+    digest: e2243453c5ca4b8549ce4b41f34a9de35db1cb928180bd8cbcf3d2b969079830
     name: ucard_ng_user_svc
     type: application
     urls:
     - https://pharmdiv.github.io/ucard-microservices/ucard_ng_user_svc-0.1.10.tgz
     version: 0.1.10
-generated: "2024-12-22T18:09:17.539900675+01:00"
+generated: "2024-12-22T18:31:08.294047283+01:00"

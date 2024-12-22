@@ -6,7 +6,7 @@ app:
     tag: latest
     pullPolicy: Always
   replicas: 1
-  namespace: ucard-ng-dev
+  # namespace: ucard-ng-dev
 
 dapr:
   appId: ucard-ng-token-svc
