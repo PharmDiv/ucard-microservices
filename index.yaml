@@ -1,0 +1,69 @@
+apiVersion: v1
+entries:
+  ucard-ng-notification-svc:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-22T18:09:17.540340855+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 0548b2b028673a8a7c356677556e8f9bcbbade75e7fce8ebf65b9470b9881baa
+    name: ucard-ng-notification-svc
+    type: application
+    urls:
+    - https://pharmdiv.github.io/ucard-microservices/ucard-ng-notification-svc-0.1.1.tgz
+    version: 0.1.1
+  ucard-ng-token-svc:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-22T18:09:17.54068545+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 7f072f0a1b966793c216d7ac29b93239ced60180d255822f3ce3f332c8156bcf
+    name: ucard-ng-token-svc
+    type: application
+    urls:
+    - https://pharmdiv.github.io/ucard-microservices/ucard-ng-token-svc-0.1.0.tgz
+    version: 0.1.0
+  ucard_ng_audit_svc:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-22T18:09:17.540993037+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 03129cd66a1b8f3af1af4d2ba4c998071c5a5fb729dff17f5971bcf86cc8f8d9
+    name: ucard_ng_audit_svc
+    type: application
+    urls:
+    - https://pharmdiv.github.io/ucard-microservices/ucard_ng_audit_svc-0.1.1.tgz
+    version: 0.1.1
+  ucard_ng_auth_svc:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-22T18:09:17.541522478+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 228a9bd3d3cad37507cabcc11a61bdc71799c8cd6d7b23fccbd0deeb6d9b0350
+    name: ucard_ng_auth_svc
+    type: application
+    urls:
+    - https://pharmdiv.github.io/ucard-microservices/ucard_ng_auth_svc-0.1.5.tgz
+    version: 0.1.5
+  ucard_ng_promo_svc:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-12-22T18:09:17.541829878+01:00"
+    description: A Helm chart for Kubernetes
+    digest: cb6dc64f39808ea82eafa00f9e4381a8d0439e688afaf2db17165370ae716f61
+    name: ucard_ng_promo_svc
+    type: application
+    urls:
+    - https://pharmdiv.github.io/ucard-microservices/ucard_ng_promo_svc-0.1.1.tgz
+    version: 0.1.1
+  ucard_ng_user_svc:
+  - apiVersion: v2
+    appVersion: 3.0.10
+    created: "2024-12-22T18:09:17.542146559+01:00"
+    description: A Helm chart for U-Card User Service
+    digest: ca8f4d2cfa8e77bbee655f2f886eb5fc181a30febe6a09f11288d6c4bb4804d1
+    name: ucard_ng_user_svc
+    type: application
+    urls:
+    - https://pharmdiv.github.io/ucard-microservices/ucard_ng_user_svc-0.1.10.tgz
+    version: 0.1.10
+generated: "2024-12-22T18:09:17.539900675+01:00"

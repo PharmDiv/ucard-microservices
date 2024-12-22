@@ -1,0 +1,41 @@
+app:
+  name: ucard-ng-audit-svc
+  port: 5003
+  image:
+    repository: docker.io/darksueii/ucard_ng_audit_svc
+    tag: latest
+    pullPolicy: Always
+  replicas: 1
+  namespace: ucard-ng-dev
+
+dapr:
+  appId: ucard-ng-audit-svc
+  appPort: 5003
+  enableMetrics: true
+  enabled: true
+  metricsPort: 9099
+  sidecarListenAddresses: 0.0.0.0
+
+configmap:
+  name: ucard-ng-audit-svc-config
+  data:
+    DAPR_HTTP_PORT: null
+    APP_PORT: null
+    DB_PORT: null
+
+secret:
+  name: ucard-ng-audit-svc-secret
+  data:
+    NODE_ENV: null
+    APP_HOST: null
+    DAPR_HOST: null
+    DAPR_PUBSUB_NAME: null
+    DB_HOST: null
+    DB_USERNAME: null
+    DB_PASSWORD: null
+    DB_DATABASE: null
+    DB_DATABASE_TYPE: null
+
+service:
+  type: ClusterIP
+  protocol: TCP

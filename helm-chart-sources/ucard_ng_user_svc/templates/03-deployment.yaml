@@ -1,0 +1,99 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: {{ .Release.Name }}
+        dapr.io/enable-api-logging: "true"
+    spec:
+      containers:
+        - name: {{ .Release.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+          ports:
+            - containerPort: 4000
+          resources:
+            requests:
+              memory: {{ .Values.resources.requests.memory }}
+              cpu: {{ .Values.resources.requests.cpu }}
+            limits:
+              memory: {{ .Values.resources.limits.memory }}
+          env:
+            # Non-sensitive environment variables from ConfigMap
+            - name: FLASK_APP
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FLASK_APP
+            - name: APP_VERSION
+              value: {{ .Chart.AppVersion }}
+            - name: AUTH_SVC_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: AUTH_SVC_URL
+            - name: FINERACT_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FINERACT_URL
+            - name: FINERACT_TENANT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FINERACT_TENANT
+            - name: FINERACT_AGENT_SAVINGS_PRODUCT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FINERACT_AGENT_SAVINGS_PRODUCT
+            - name: FINERACT_CLIENT_TYPE_AGENT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FINERACT_CLIENT_TYPE_AGENT
+            - name: FINERACT_GENDER_ID_MALE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FINERACT_GENDER_ID_MALE
+            - name: FINERACT_GENDER_ID_FEMALE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FINERACT_GENDER_ID_FEMALE
+            - name: FINERACT_DEFAULT_OFFICE_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FINERACT_DEFAULT_OFFICE_ID
+            - name: FLASGGER_BASE_PATH
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FLASGGER_BASE_PATH
+            # Sensitive environment variables from Secret
+            - name: DATABASE_URI
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secrets
+                  key: DATABASE_URI
+            - name: FINERACT_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secrets
+                  key: FINERACT_USER
+            - name: FINERACT_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secrets
+                  key: FINERACT_PASS

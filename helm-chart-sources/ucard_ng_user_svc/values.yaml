@@ -1,0 +1,32 @@
+image:
+  repository: docker.io/crazydev0/ucard_user_svc
+
+env:
+  databaseUri: null
+  FLASK_APP: null
+  AUTH_SVC_URL: null
+  FINERACT_URL: null
+  FINERACT_USER: null
+  FINERACT_PASS: null
+  FINERACT_TENANT: null
+  FINERACT_AGENT_SAVINGS_PRODUCT: null
+  FINERACT_CLIENT_TYPE_AGENT: null
+  FINERACT_GENDER_ID_MALE: null
+  FINERACT_GENDER_ID_FEMALE: null
+  FINERACT_DEFAULT_OFFICE_ID: null
+  FLASGGER_BASE_PATH: null
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "100m"
+  limits:
+    memory: "512Mi"
+
+dapr:
+  appId: ucard_user_svc
+  appPort: 4000
+  enableMetrics: true
+  enabled: true
+  metricsPort: 9099
+  sidecarListenAddresses: 0.0.0.0

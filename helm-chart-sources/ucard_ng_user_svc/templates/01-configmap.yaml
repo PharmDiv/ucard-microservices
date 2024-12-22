@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  FLASK_APP: {{ .Values.env.FLASK_APP | required "env.FLASK_APP must be set!" | quote }}
+  AUTH_SVC_URL: {{ .Values.env.AUTH_SVC_URL | required "env.AUTH_SVC_URL must be set!" | quote }}
+  FINERACT_URL: {{ .Values.env.FINERACT_URL | required "env.FINERACT_URL must be set!" | quote }}
+  FINERACT_TENANT: {{ .Values.env.FINERACT_TENANT | required "env.FINERACT_TENANT must be set!" | quote }}
+  FINERACT_AGENT_SAVINGS_PRODUCT: {{ .Values.env.FINERACT_AGENT_SAVINGS_PRODUCT | required "env.FINERACT_AGENT_SAVINGS_PRODUCT must be set!" | quote }}
+  FINERACT_CLIENT_TYPE_AGENT: {{ .Values.env.FINERACT_CLIENT_TYPE_AGENT | required "env.FINERACT_CLIENT_TYPE_AGENT must be set!" | quote }}
+  FINERACT_GENDER_ID_MALE: {{ .Values.env.FINERACT_GENDER_ID_MALE | required "env.FINERACT_GENDER_ID_MALE must be set!" | quote }}
+  FINERACT_GENDER_ID_FEMALE: {{ .Values.env.FINERACT_GENDER_ID_FEMALE | required "env.FINERACT_GENDER_ID_FEMALE must be set!" | quote }}
+  FINERACT_DEFAULT_OFFICE_ID: {{ .Values.env.FINERACT_DEFAULT_OFFICE_ID | required "env.FINERACT_DEFAULT_OFFICE_ID must be set!" | quote }}
+  FLASGGER_BASE_PATH: {{ .Values.env.FLASGGER_BASE_PATH | required "env.FLASGGER_BASE_PATH must be set!" | quote }}
